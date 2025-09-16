@@ -1,0 +1,11 @@
+.banner_title {
+    padding: 20px;
+    color: white;
+    text-align: left, top;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 150px;
+    border-radius: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+}
