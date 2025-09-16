@@ -9,6 +9,7 @@ function App() {
 return (
 <div>
     <Banner />
+    <p>Welcome to the City Of Tshwane Bus route</p>
 </div>
 );
 }
