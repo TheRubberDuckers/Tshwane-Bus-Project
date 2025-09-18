@@ -1,16 +1,31 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import './App.css';
 import Banner from "./Components/Banner";
-
+import Background from "./Components/Background";
 
 function App() {
-return (
-<div>
-    <Banner />
-    <p>Welcome to the City Of Tshwane Bus route</p>
-</div>
-);
+  const appStyle = {
+    margin: 0,
+    backgroundColor: "white",
+    minHeight: "100vh",
+    fontFamily: "Arial, sans-serif",
+  };
+
+  return (
+    <div style={{
+      minHeight: "100vh",  
+      width: "100%",    
+      backgroundColor: "white",
+      margin: 0,
+      padding: 0,
+      fontFamily: "Arial, sans-serif",
+      }}>
+      <div style={appStyle}>
+        <Banner />
+        <Background />
+      </div>
+    </div>
+  );
 }
+
 export default App;
+

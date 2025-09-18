@@ -1,44 +1,21 @@
+<!doctype html>
 <html lang="en">
-<head>
-  <title>Tshwane Bus Route</title>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tshwane Bus Route</title>
+  </head>
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: white;
-    }
-    .banner {
-      width: 100%;
-      height: 200px;
-      background-color: #1f8a2f; /* Tshwane green */
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: white;
-      text-align: center;
-    }
-    .banner h1 {
-      font-size: 3rem;
-      margin: 0;
-    }
+  body {
+    margin: 0;
+    background-color: white;
+    font-family: Arial, sans-serif;
+  }
+</style>
 
-    /* Page content */
-    .content {
-      padding: 2rem;
-      text-align: center;
-    }
-  </style>
-</head>
-<body>
-  <div class="banner">
-    <a href="https://www.tshwane.gov.za/?page_id=719" target="_blank">
-      <h1>Tshwane Bus Route</h1>
-    </a>
-  </div>
-
-  <!-- Main Content -->
-  <div class="content">
-    <p>Welcome to the City of Tshwane Bus Route Portal. Explore routes, schedules, and more.</p>
-  </div>
-</body>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>
