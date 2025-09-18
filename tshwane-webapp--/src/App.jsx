@@ -9,7 +9,9 @@ function App() {
 
   return (
     <>
-      <Map></Map>
+      <div id='MapContainer'>
+        <Map></Map>
+      </div>
     </>
   )
 }
