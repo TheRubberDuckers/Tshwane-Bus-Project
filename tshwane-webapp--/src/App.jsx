@@ -1,29 +1,28 @@
 import './App.css';
-import Banner from "./Components/Banner";
-import Background from "./Components/Background";
+import { useState } from 'react';
+import Sidebar from "./Components/Sidebar";
+import Map from "./Components/Map";
+
 
 function App() {
-  const appStyle = {
-    margin: 0,
-    backgroundColor: "white",
-    minHeight: "100vh",
-    fontFamily: "Arial, sans-serif",
-  };
+  const [activeRoute, setActiveRoute]= useState(null);
 
+  //Data we can update later on
+  const routes = [
+    { id: "Pretoria Central", name: "Pretoria Central", color: "red" },
+    { id: "Sunnyside", name: "Sunnyside", color: "blue" },
+    { id: "Hatfield", name: "Hatfield", color: "green" },
+  ];
   return (
-    <div style={{
-      minHeight: "100vh",  
-      width: "100%",    
-      backgroundColor: "white",
-      margin: 0,
-      padding: 0,
-      fontFamily: "Arial, sans-serif",
-      }}>
-      <div style={appStyle}>
-        <Banner />
-        <Background />
-      </div>
+    <div className="app-container">
+      <Sidebar
+        routes={routes}
+        activeRoute={activeRoute}
+        onSelect={setActiveRoute}
+        />
+        <Map routes= {routes} activeRoute={activeRoute}/>
     </div>
+
   );
 }
 
