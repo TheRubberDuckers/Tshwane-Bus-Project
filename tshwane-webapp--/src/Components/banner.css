@@ -1,0 +1,21 @@
+.banner_size {
+  width: 100%;       
+  max-width: 1200px;      
+  margin: 20px auto;        
+  height: 150px;            
+  background-color: #1f8a2f; 
+  border-radius: 12px;
+  display: flex;
+  justify-content: flex-start; 
+  align-items: flex-start;     
+  padding: 20px;
+  box-sizing: border-box;    
+}
+
+.banner_content {
+  display: flex;
+  flex-direction: column; 
+  gap: 10px;               /* space between title and subtitle */
+  color: white;
+  font-family: Arial, sans-serif;
+}
