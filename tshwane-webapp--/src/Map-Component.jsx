@@ -2,7 +2,7 @@ import { MapContainer, TileLayer, Polyline, Marker, Popup } from 'react-leaflet'
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
 
-function Map(){
+function MapComponent(){
     const pos = [-25.7566, 28.1914];
     const pos2 = [-25.825314755482935, 28.26512598150676];
     const path = [[-25.7566, 28.1914],
@@ -66,4 +66,4 @@ function Map(){
         </>
     )
 } 
-export default Map
+export default MapComponent

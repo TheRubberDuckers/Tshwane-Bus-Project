@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
-import Map from './Map'
+import Map from './Map-Component'
 import './App.css'
 
 function App() {
@@ -10,7 +10,7 @@ function App() {
   return (
     <>
       <div id='MapContainer'>
-        <Map></Map>
+        <MapComponent></MapComponent>
       </div>
     </>
   )
