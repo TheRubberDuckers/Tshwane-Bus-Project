@@ -2,8 +2,6 @@ import './App.css';
 import { useState } from 'react';
 import Sidebar from "./Components/Sidebar";
 import Map from "./Components/Map";
-
-
 function App() {
   const [activeRoute, setActiveRoute]= useState(null);
 
