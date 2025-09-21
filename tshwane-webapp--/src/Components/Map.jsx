@@ -1,4 +1,5 @@
 import Route_line from "./Route_line";
+import MapComponent from "../Map-Component";
 
 export default function Map(
     {routes, activeRoute}
@@ -18,6 +19,9 @@ export default function Map(
             }
             <div className="selected-text">
                 {activeRoute?  `Selected: ${activeRoute}`:"Select a Route"}
+            </div>
+            <div style={{display: "grid", placeItems: "center"}}>
+                <MapComponent></MapComponent>
             </div>
 
         </div>

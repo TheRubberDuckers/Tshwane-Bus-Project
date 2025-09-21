@@ -96,3 +96,9 @@
   background-color: white;  
   color: black;             
 }
+
+
+#MapContainer{
+  width: 25%;
+  margin: auto;
+}
