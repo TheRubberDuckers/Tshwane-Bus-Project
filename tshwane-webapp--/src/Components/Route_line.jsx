@@ -9,7 +9,6 @@ export default function Route_line(
         width: "60%",
         margin: "20px auto",
         borderRadius: "4px",
-        transition: "all 0.3s",
-    };
+        transition: "all 0.3s",    };
     return <div style= {style}></div>
 }

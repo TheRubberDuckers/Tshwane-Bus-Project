@@ -12,6 +12,7 @@ function App() {
     { id: "Pretoria Central", name: "Pretoria Central", color: "red" },
     { id: "Sunnyside", name: "Sunnyside", color: "blue" },
     { id: "Hatfield", name: "Hatfield", color: "green" },
+    { id: "Danville", name: "Danville", color: "purple"}
   ];
   return (
     <div className="app-container">
