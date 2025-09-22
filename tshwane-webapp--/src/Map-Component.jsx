@@ -24,7 +24,7 @@ function MapComponent(){
             />
             <Marker position={firstPos}>
                 <Popup>
-                    Custom Message
+                    Found near macdonald 
                 </Popup>
             </Marker>
             <Marker position={secondPos}>

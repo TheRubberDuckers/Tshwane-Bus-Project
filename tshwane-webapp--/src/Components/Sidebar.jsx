@@ -13,6 +13,7 @@ export default function Sidebar({ routes, activeRoute, onSelect }) {
       />
 
       {/* Route list */}
+      <div className="sidebar-list">
       {routes.map((route) => (
         <Sidebar_Item
           key={route.id}
@@ -21,6 +22,7 @@ export default function Sidebar({ routes, activeRoute, onSelect }) {
           onClick={() => onSelect(route.id)}
         />
       ))}
+    </div>
     </div>
   );
 }

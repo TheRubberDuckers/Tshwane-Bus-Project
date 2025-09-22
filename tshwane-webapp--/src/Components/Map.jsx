@@ -7,20 +7,13 @@ export default function Map(
     return (
         <div className="map">
             {
-                routes.map(
-                    (route) => (
-                        <Route_line
-                        key={route.id}
-                        route={route}
-                        active={activeRoute ==route.id}
-                        />
-                    )
-                )
             }
             <div className="selected-text">
                 {activeRoute?  `Selected: ${activeRoute}`:"Select a Route"}
             </div>
             <div style={{display: "grid", placeItems: "center"}}>
+                <p></p>
+                <p></p>
                 <MapComponent></MapComponent>
             </div>
 
