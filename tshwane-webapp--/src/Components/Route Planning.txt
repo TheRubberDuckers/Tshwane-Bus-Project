@@ -1,0 +1,64 @@
+
+//Declaring routeline outside so it can be used
+//Global variable 
+line = null
+let active = false
+
+
+
+function draw_route (data, map, active, colors):
+	//Create the line once if  it doesnt exist
+	if (!line) {
+		line = L.polyline(data,{color: colors} )
+	}	
+	if (active) {
+		line.addTo(map)
+	}else {
+		map.removeLayer(line)
+	}
+	
+
+function Create_map ():
+	map =  L.map('map').setView ([PTA_Lat,PTA_Long], 13)
+	L.tileLayer(links).addTo(map)
+	return map
+
+
+function Toggle_route (name, data, map):
+	Button (label = name)
+		ON CLICK:	
+			active = NOT active
+			draw_route(data.route, map, active, data.color)
+
+function main:
+	import json as routes
+	map = Create_map()
+	Toggle_route (Danville, routes, map )
+
+
+JSON structure
+{
+	"routes": [
+		{
+			"id": "danville",
+			"name": "Danville 1",
+			"color": "blue",
+			"route": [
+				[lat, long],
+				[lat, long]
+			]
+		},
+	"routes": [
+		{
+			"id": "danville",
+			"name": "Danville 2",
+			"color": "blue",
+			"route": [
+				[lat, long],
+				[lat, long]
+			]
+		},
+	
+	]
+
+	
