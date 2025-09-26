@@ -1,0 +1,34 @@
+{
+	"type" : "FeaatureCollect,
+	"feature": [
+		{
+			"type": "Feature",
+			"properties": {
+				"id": "name of place"
+				"name": "name of place"
+				"color": "whatever color"
+			},
+			"geometry": {
+				"type": "LineString",
+				"coordinates":[
+					[long, lat],
+					[long 1, lat 2]
+				]
+			}
+		},//second data at this curly bracket
+		{
+			"type": "Feature",
+			"properties": {
+				"id": "name of place"
+				"name": "name of place"
+				"color": "whatever color"
+			},
+			"geometry": {
+				"type": "LineString",
+				"coordinates":[
+					[long, lat],
+					[long 1, lat 2]
+				]
+		} //end of data but you can add more but must add comma at the end and start mew curly bracket
+	]
+}
