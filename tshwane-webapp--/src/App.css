@@ -68,6 +68,7 @@
   background-color: white;
   border: 1px solid #ccc;
   border-radius: 6px;
+  color: black;
 }
 
 .sidebar-list {
@@ -78,7 +79,7 @@
 }
 
 .sidebar-item.active {
-  background-color: #007bff;
+  background-color: green;
   color: white;
 }
 
@@ -97,7 +98,7 @@
 }
 
 .search-bar {
-  width: 100%;
+  width: 99%;
   padding: 10px;
   margin-bottom: 15px;
   border: 1px solid #333;   
