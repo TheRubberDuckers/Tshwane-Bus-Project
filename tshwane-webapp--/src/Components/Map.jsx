@@ -1,6 +1,4 @@
-import Route_line from "./Route_line";
-import MapComponent from "../Map-Component";
-
+import MapComponent from "../Map-Component"
 export default function Map(
     {routes, activeRoute}
 ){
@@ -14,7 +12,7 @@ export default function Map(
             <div style={{display: "grid", placeItems: "center"}}>
                 <p></p>
                 <p></p>
-                <MapComponent></MapComponent>
+                <MapComponent routes={routes} activeRoute={activeRoute}></MapComponent>
             </div>
 
         </div>
