@@ -79,7 +79,7 @@
 }
 
 .sidebar-item.active {
-  background-color: green;
+  background-color: #44c54e;
   color: white;
 }
 
@@ -98,7 +98,7 @@
 }
 
 .search-bar {
-  width: 99%;
+  width: 100%;
   padding: 10px;
   margin-bottom: 15px;
   border: 1px solid #333;   

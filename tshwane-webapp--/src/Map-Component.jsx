@@ -3,7 +3,6 @@ import 'leaflet/dist/leaflet.css';
 import React from 'react';
 
 function MapComponent({routes, activeRoute}){
-    console.log (routes)
 
     return(
         
