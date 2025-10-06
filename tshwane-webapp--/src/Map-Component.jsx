@@ -1,36 +1,38 @@
-import { MapContainer, TileLayer, Polyline, Marker, Popup } from 'react-leaflet'
+import { MapContainer, TileLayer, Polyline, Popup,Marker} from 'react-leaflet'
 import 'leaflet/dist/leaflet.css';
-import Map from './assets/Map/Map.json'
+import React from 'react';
 
-function MapComponent(){
-    const route = [];
-    const arrLen = Map.features[0]['geometry']['coordinates'].length;
-    const coordinates = Map.features[0]['geometry']['coordinates'];
-
-    for (let i = 0; i < arrLen; i++){
-        const reversed = [...coordinates[i]].reverse(); //make a copy of coordinates array and then revese that copy
-        route.push(reversed);
-    }
-
-    const firstPos = route[0];
-    const secondPos = route[route.length - 1];
+function MapComponent({routes, activeRoute}){
+    console.log (routes)
 
     return(
+        
         <>
-            <MapContainer center={firstPos} zoom={14} scrollWheelZoom={false} style={{ height: "60vh", width: "60vw" }}>
+            <MapContainer center={[-25.7461, 28.1881]} zoom={14} touchZoom={true} scrollWheelZoom={true} style={{ height: "60vh", width: "60vw" }}>
             <TileLayer
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             />
-            <Marker position={firstPos}>
-                <Popup>
-                    Custom Message
-                </Popup>
-            </Marker>
-            <Marker position={secondPos}>
-                <Popup>Second Message</Popup>
-            </Marker>
-            <Polyline positions={route} ></Polyline>
+            {routes.map(route=>
+                (
+                    
+                    activeRoute==route.id && (
+                        <React.Fragment key={route.id}>
+                            <Polyline
+                            positions = {route.coordinates}
+                            color={route.color}
+                            >
+                            </Polyline>
+                            <Marker position={route.coordinates[0]}>
+                                <Popup>{route.name} Start</Popup>
+                            </Marker>
+                            <Marker position={route.coordinates[route.coordinates.length -1]}>
+                                <Popup>{route.name} End</Popup>
+                            </Marker>
+                        </React.Fragment>
+                    )
+                )
+            )}
             </MapContainer>
         </>
     )

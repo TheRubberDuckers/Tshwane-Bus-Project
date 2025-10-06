@@ -1,14 +1,18 @@
-export default function Route_line(
-    {
-        route, active
-    }
-){
-    const style = {
-        backgroundColor: route.color,
-        height: active? "6px" : "3px",
-        width: "60%",
-        margin: "20px auto",
-        borderRadius: "4px",
-        transition: "all 0.3s",    };
-    return <div style= {style}></div>
+import { useState } from "react";
+import { Polyline, Marker } from "leaflet";
+
+export default function Route_line(data, colors, name){
+  const [active, setActive]=useState(false);
+  return(
+  <div>
+    <button onClick= {
+      () => setActive(!active)
+    }>
+      {active ? {name} : {name}}
+    </button>
+    {active && <Polyline positions={data} color={colors}/>}
+    {active && <marker position = {data[0]} />}
+    {active && <marker position = {data[-1]} />}
+  </div>
+  );
 }

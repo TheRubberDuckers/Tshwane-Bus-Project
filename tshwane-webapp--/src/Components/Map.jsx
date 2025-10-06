@@ -1,27 +1,18 @@
-import Route_line from "./Route_line";
-import MapComponent from "../Map-Component";
-
+import MapComponent from "../Map-Component"
 export default function Map(
     {routes, activeRoute}
 ){
     return (
         <div className="map">
             {
-                routes.map(
-                    (route) => (
-                        <Route_line
-                        key={route.id}
-                        route={route}
-                        active={activeRoute ==route.id}
-                        />
-                    )
-                )
             }
             <div className="selected-text">
                 {activeRoute?  `Selected: ${activeRoute}`:"Select a Route"}
             </div>
             <div style={{display: "grid", placeItems: "center"}}>
-                <MapComponent></MapComponent>
+                <p></p>
+                <p></p>
+                <MapComponent routes={routes} activeRoute={activeRoute}></MapComponent>
             </div>
 
         </div>
