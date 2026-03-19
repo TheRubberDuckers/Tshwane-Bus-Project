@@ -1,3 +1,5 @@
+@import "tailwindcss";
+
 #root {
   margin: 0;
   padding: 0;
@@ -58,7 +60,7 @@
 
 .sidebar h2 {
   margin-bottom: 20px;
-  color: #18A71D;
+  color: #18a71d;
 }
 
 .sidebar-item {
@@ -101,15 +103,14 @@
   width: 99%;
   padding: 10px;
   margin-bottom: 15px;
-  border: 1px solid #333;   
+  border: 1px solid #333;
   border-radius: 6px;
   font-size: 14px;
-  background-color: white;  
-  color: black;             
+  background-color: white;
+  color: black;
 }
 
-
-#MapContainer{
+#MapContainer {
   width: 25%;
   margin: auto;
 }
