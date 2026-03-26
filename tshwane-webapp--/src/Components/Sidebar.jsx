@@ -1,29 +1,18 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import Sidebar_Item from "./Sidebar_Item";
+import { SearchContext } from "./Context";
 
 export default function Sidebar({ routes, activeRoute, onSelect }) {
-  const [searchTerm, setSearchTerm] = useState("");
+  const { searchTerm, setSearchTerm } = useContext(SearchContext);
 
   // Filter routes based on search input
-  const filteredRoutes = routes.filter(route =>
-    route.name.toLowerCase().includes(searchTerm.toLowerCase())
+  const filteredRoutes = routes.filter((route) =>
+    route.name.toLowerCase().includes(searchTerm.toLowerCase()),
   );
 
   return (
-    <div className="sidebar">
-      <h2>Tshwane Bus Routes</h2>
-      
-      {/* Search bar */}
-      <input 
-        type="text" 
-        placeholder="Search route or stop..." 
-        className="search-bar"
-        value={searchTerm}
-        onChange={(e) => setSearchTerm(e.target.value)}
-      />
-
-      {/* Route list */}
-      <div className="sidebar-list">
+    <>
+      <div className=" pl-2 text-black">
         {filteredRoutes.map((route) => (
           <Sidebar_Item
             key={route.id}
@@ -33,6 +22,6 @@ export default function Sidebar({ routes, activeRoute, onSelect }) {
           />
         ))}
       </div>
-    </div>
+    </>
   );
 }
