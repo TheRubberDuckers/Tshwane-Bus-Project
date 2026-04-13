@@ -4,6 +4,7 @@ import { SearchContext } from "./Context";
 
 export default function Sidebar({ routes, activeRoute, onSelect }) {
   const { searchTerm, setSearchTerm } = useContext(SearchContext);
+  const [animate, setAnimate] = useState(false);
 
   // Filter routes based on search input
   const filteredRoutes = routes.filter((route) =>
@@ -12,7 +13,10 @@ export default function Sidebar({ routes, activeRoute, onSelect }) {
 
   return (
     <>
-      <div className=" pl-2 text-black">
+      <div
+        className={`pl-2 text-black ${animate ? `animate-fade-up animate-duration-750` : ""}`}
+        onClick={() => setAnimate(!animate)}
+      >
         {filteredRoutes.map((route) => (
           <Sidebar_Item
             key={route.id}
