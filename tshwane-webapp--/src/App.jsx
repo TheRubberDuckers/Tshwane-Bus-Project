@@ -20,7 +20,7 @@ function App() {
   }));
   return (
     <SearchContext.Provider value={{ searchTerm, setSearchTerm }}>
-      <div className="grid grid-col-3 gap-2 bg-green-50 fixed top-0 left-0 right-0 w-100vw h-300">
+      <div className="grid grid-col-3 gap-2 bg-[#f7fdf9] fixed top-0 left-0 right-0 w-100vw h-300">
         <div className="col-span-3 -mt-14">
           <Header />
         </div>
