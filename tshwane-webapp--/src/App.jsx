@@ -4,8 +4,9 @@ import Sidebar from "./Components/Sidebar";
 import Map_Data from "./assets/Map/MapData.json";
 import "leaflet/dist/leaflet.css";
 import Header from "./Components/Header";
-import MapComponent from "./Map-Component";
+import MapComponent from "./Components/Map-Component.jsx";
 import { SearchContext } from "./Components/Context";
+import TimeTable from "./Components/TimeTable.jsx";
 
 function App() {
   const [activeRoute, setActiveRoute] = useState(null);
@@ -25,15 +26,16 @@ function App() {
           <Header />
         </div>
 
-        <div className="col-span-3 flex flex-row -mt-125">
+        <div className="col-span-3 flex flex-row -mt-64">
           <Sidebar
             routes={routes}
             activeRoute={activeRoute}
             onSelect={setActiveRoute}
           />
 
-          <div className="">
+          <div className="flex flex-col">
             <MapComponent routes={routes} activeRoute={activeRoute} />
+            <TimeTable activeRoute={activeRoute} />
           </div>
         </div>
       </div>

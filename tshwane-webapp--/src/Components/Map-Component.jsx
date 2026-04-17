@@ -12,13 +12,12 @@ import "leaflet/dist/leaflet.css";
 import React from "react";
 
 function MapComponent({ routes, activeRoute }) {
-  console.log(routes);
-
   return (
     <>
       <MapContainer
         center={[-25.7461, 28.1881]}
         zoom={14}
+        zoomControl={false}
         touchZoom={true}
         scrollWheelZoom={true}
         style={{ height: "65vh", width: "83.3vw", zIndex: 500 }}
@@ -39,7 +38,12 @@ function MapComponent({ routes, activeRoute }) {
                   fillOpacity={1}
                 ></Polyline>
 
-                <CircleMarker center={route.coordinates[0]} color={route.color}>
+                <CircleMarker
+                  center={route.coordinates[0]}
+                  color={route.color}
+                  fillColor="white"
+                  fillOpacity={1}
+                >
                   <Popup>{route.name} Start</Popup>
                 </CircleMarker>
 

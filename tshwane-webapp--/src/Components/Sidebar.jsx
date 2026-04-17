@@ -17,7 +17,7 @@ export default function Sidebar({ routes, activeRoute, onSelect }) {
     <>
       <div
         key={animKey}
-        className={`pl-2 text-black animate-fade-up animate-duration-750`}
+        className="text-black animate-fade-up animate-duration-750"
         onClick={restartAnim}
       >
         {filteredRoutes.map((route) => (
