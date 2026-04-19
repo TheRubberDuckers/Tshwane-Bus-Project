@@ -4,12 +4,16 @@ import { SearchContext } from "./Context";
 
 export default function Sidebar({ routes, activeRoute, onSelect }) {
   const { searchTerm, setSearchTerm } = useContext(SearchContext);
-  const [animate, setAnimate] = useState(false);
+  const [animKey, setAnimKey] = useState(false);
 
   // Filter routes based on search input
   const filteredRoutes = routes.filter((route) =>
     route.name.toLowerCase().includes(searchTerm.toLowerCase()),
   );
+
+  const restartAnim = () => {
+    setAnimKey((prev) => prev + 1);
+  };
 
   return (
     <>
