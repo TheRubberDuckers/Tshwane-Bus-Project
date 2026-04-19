@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import Times from "/src/assets/Map/Times.json";
+import Times from "/home/lindelani-mkhaliphi/Documents/Scripts/Tshwane-Bus-Project/tshwane-webapp--/src/assets/Map/Times.json";
 import { SearchContext } from "./Context";
 
 export default function TimeTable({ activeRoute }) {
