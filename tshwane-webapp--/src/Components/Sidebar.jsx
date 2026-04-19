@@ -4,9 +4,7 @@ import { SearchContext } from "./Context";
 
 export default function Sidebar({ routes, activeRoute, onSelect }) {
   const { searchTerm, setSearchTerm } = useContext(SearchContext);
-  const [animate, setAnimate] = useState(0);
-
-  const restartAnim = () => setAnimate((prev) => prev + 1);
+  const [animate, setAnimate] = useState(false);
 
   // Filter routes based on search input
   const filteredRoutes = routes.filter((route) =>
