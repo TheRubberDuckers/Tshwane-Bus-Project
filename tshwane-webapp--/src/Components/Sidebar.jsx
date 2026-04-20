@@ -10,7 +10,7 @@ export default function Sidebar({ routes, activeRoute, onSelect }) {
 
   // Filter routes based on search input
   const filteredRoutes = routes.filter((route) =>
-    route.name.toLowerCase().includes(searchTerm.toLowerCase()),
+    route.id.toLowerCase().includes(searchTerm.toLowerCase()),
   );
 
   return (
