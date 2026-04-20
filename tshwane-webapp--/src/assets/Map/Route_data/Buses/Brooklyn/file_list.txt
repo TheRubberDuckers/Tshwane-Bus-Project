@@ -1,0 +1,6 @@
+id=brooklyn_10,color=#48f0f0,thabo_0.json,thabo_-1.json,jeff_0.json,jeff_-1.json,jeff_-2.json,justice_1.json,justice_2.json,justice_3.json,rissik_0.json,atterbury_0.json,lois_0.json,garstfontein_1.json,corobay_0.json,garstfontien_2.json,antonan_0.json,end
+id=brooklyn_5,color=green,madiba_0.json,madiba_-1.json,dutoit_0.json,dutoit_1.json,dutoit_3.json,schoeman_0.json,park_0.json,park_1.json,park_2.json,park_3.json,park_4.json,janshoba_0.json,janshoba_1.json,janshoba_2.json,burnett_0.json,end
+id=brooklyn_8,color=purple,madiba_0.json,madiba_-1.json,dutoit_0.json,dutoit_1.json,dutoit_3.json,schoeman_0.json,park_0.json,park_1.json,park_2.json,park_3.json,park_4.json,janshoba_0.json,janshoba_1.json,janshoba_2.json,burnett_0.json,waterkloof_0.json,end
+id=brooklyn_9,color=blue,madiba_0.json,sisulu_0.json,sisulu_1.json,sisulu_2.json,rissik_0.json,justice_0.json,justice_1.json,justice_2.json,brooklyn_0.json,garstfontein_0.json,lois_1.json,end
+id=capital_park,color=brown,bosman_0.json,bosman_1.json,paul_0.json,trouw_0.json,trouw_0.json,flower_0.json,end
+id=centurion,color=pink,pretorius_-1.json,pretorius_-1.json,sophie_0.json,snake_1.json,end
