@@ -1,12 +1,18 @@
 import json
 import os
 
+
 def extract_lines(file_list):
     lines = []
+
+    # sort files so _0, _1, _2 order is preserved
+    file_list = sorted(file_list)
+
     for file_path in file_list:
         if not os.path.exists(file_path):
             print(f"Warning: file not found, skipping: {file_path}")
             continue
+
         try:
             with open(file_path, "r") as f:
                 data = json.load(f)
@@ -18,19 +24,18 @@ def extract_lines(file_list):
             geom = feature.get("geometry") or {}
             coords = geom.get("coordinates", [])
             gtype = geom.get("type")
+
             if gtype == "LineString":
                 lines.append(coords)
+
             elif gtype == "MultiLineString":
+                # keep structure intact (DON'T flatten incorrectly)
                 lines.extend(coords)
+
     return lines
 
 
 def parse_txt(txt_file):
-    """
-    Format:
-    id=1,color=#ff0000,a.json,b.json
-    id=2,color=#00ff00,c.json,d.json
-    """
     base_dir = os.path.dirname(os.path.abspath(txt_file))
     groups = []
 
@@ -49,11 +54,14 @@ def parse_txt(txt_file):
                 p = p.strip()
                 if not p or p == "end":
                     continue
+
                 if p.startswith("id="):
                     raw_id = p[3:]
                     group_id = int(raw_id) if raw_id.isdigit() else raw_id
+
                 elif p.startswith("color="):
                     color = p[6:]
+
                 else:
                     if not p.endswith(".json"):
                         p += ".json"
@@ -63,7 +71,11 @@ def parse_txt(txt_file):
                 print(f"Warning: no id= found on line {line_num}, skipping")
                 continue
 
-            groups.append({"id": group_id, "color": color, "files": files})
+            groups.append({
+                "id": group_id,
+                "color": color,
+                "files": files
+            })
 
     return groups
 
@@ -74,22 +86,35 @@ def build_feature_collection(txt_file, output_file="output.geojson"):
 
     for g in groups:
         lines = extract_lines(g["files"])
+
         if not lines:
             print(f"Warning: no line geometries found for group id={g['id']}, skipping")
             continue
 
         raw_name = str(g["id"]).replace("_", " ").title()
+
         features.append({
             "type": "Feature",
             "id": g["id"],
-            "name": raw_name,
-            "properties": {"color": g["color"]},
-            geojson = {"type": "FeatureCollection", "features": features}
+            "properties": {
+                "name": raw_name,
+                "color": g["color"]
+            },
+            "geometry": {
+                "type": "MultiLineString",
+                "coordinates": lines
+            }
+        })
+
+    geojson = {
+        "type": "FeatureCollection",
+        "features": features
+    }
 
     with open(output_file, "w") as f:
         json.dump(geojson, f, indent=2)
 
-    print(f"Saved {len(features)} feature(s) to: {output_file}")
+    print(f"Saved {len(features)} feature(s) to: {os.path.abspath(output_file)}")
 
 
 # -------------------

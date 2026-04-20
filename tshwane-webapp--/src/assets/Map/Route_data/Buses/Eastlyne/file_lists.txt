@@ -1,2 +1,3 @@
-id=EastLyne_1,color=yellow,madiba_-1.json,madiba_-2.json,soutpanseberg_0.json,cr_0.json,cr_1.json,lynette_0.json,anna_0.json,storm_0.json,end
+id=EastLyne_1,color=yellow,madiba_-1.json,madiba_-2.json,soutpanseberg_0.json,wilkinson_0.json,cr_1.json,lynette_0.json,anna_0.json,bavla_0.json,end
+id=EastLyne_2,color=yellow,madiba_-1.json,madiba_-2.json,soutpanseberg_0.json,cr_0.json,cr_1.json,lynette_0.json,anna_0.json,storm_0.json,end
 
