@@ -20,27 +20,23 @@ function App() {
   line.map(([lng, lat]) => [lat, lng])
 ),
   }));
-  return (
-    <SearchContext.Provider value={{ searchTerm, setSearchTerm }}>
-      <div className="grid grid-col-3 gap-2 bg-[#f7fdf9] fixed top-0 left-0 right-0 w-100vw h-300">
-        <div className="col-span-3 -mt-14">
-          <Header />
+ return (
+  <SearchContext.Provider value={{ searchTerm, setSearchTerm }}>
+    <div className="flex flex-col bg-[#f7fdf9] fixed top-0 left-0 right-0 bottom-0">
+      <div>
+        <Header />
+      </div>
+      <div className="flex flex-row flex-1 overflow-hidden">
+        <div className="h-full overflow-y-auto">
+          <Sidebar routes={routes} activeRoute={activeRoute} onSelect={setActiveRoute} />
         </div>
-
-        <div className="col-span-3 flex flex-row -mt-125">
-          <Sidebar
-            routes={routes}
-            activeRoute={activeRoute}
-            onSelect={setActiveRoute}
-          />
-
-          <div className="">
-            <MapComponent routes={routes} activeRoute={activeRoute} />
-          </div>
+        <div className="flex-1">
+          <MapComponent routes={routes} activeRoute={activeRoute} />
         </div>
       </div>
-    </SearchContext.Provider>
-  );
+    </div>
+  </SearchContext.Provider>
+);
 }
 
 export default App;

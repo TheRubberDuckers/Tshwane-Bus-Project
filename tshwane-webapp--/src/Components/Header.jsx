@@ -7,7 +7,7 @@ export default function Header() {
   const { searchTerm, setSearchTerm } = useContext(SearchContext);
 
   return (
-    <header className="flex flex-row bg-[#4a7060] h-16 w-480 pt-3 pl-3 mt-13">
+    <header className="flex flex-row bg-[#4a7060] h-16 w-480 pt-3 pl-3">
       <div className="mr-4 flex flex-row">
         <img src={BusIcon} className="w-8 -mt-2 mr-2" />
         <div>
