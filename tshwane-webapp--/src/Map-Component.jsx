@@ -27,29 +27,24 @@ function MapComponent({ routes, activeRoute }) {
       {routes.map((route) => {
         if (activeRoute !== route.id) return null;
 
-        // ✅ Flatten coordinates (simpler to work with)
         const flatCoords = route.coordinates?.flat();
 
-        // ✅ Safely get start & end
         const start = flatCoords?.[0];
         const end = flatCoords?.[flatCoords.length - 1];
 
         return (
           <React.Fragment key={route.id}>
-            {/* ✅ Route line */}
             <Polyline
               positions={route.coordinates}
               pathOptions={{ color: route.color }}
             />
 
-            {/* ✅ Start marker */}
             {start && (
               <CircleMarker center={start} pathOptions={{ color: route.color }}>
                 <Popup>{route.name} Start</Popup>
               </CircleMarker>
             )}
 
-            {/* ✅ End marker */}
             {end && (
               <CircleMarker
                 center={end}
