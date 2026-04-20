@@ -25,7 +25,7 @@ function MapComponent({ routes, activeRoute }) {
       <ZoomControl position="bottomright" />
 
       {routes.map((route) => {
-        if (activeRoute !== route.id) return null;
+        if (!activeRoute.includes(route.id)) return null;
 
         const flatCoords = route.coordinates?.flat();
 
@@ -40,7 +40,7 @@ function MapComponent({ routes, activeRoute }) {
             />
 
             {start && (
-              <CircleMarker center={start} pathOptions={{ color: route.color, fillColor: "white", fillOpacity: 1}}>
+              <CircleMarker center={start} pathOptions={{ color: route.color, fillColor:"white", fillOpacity: 1 }}>
                 <Popup>{route.name} Start</Popup>
               </CircleMarker>
             )}
@@ -48,7 +48,7 @@ function MapComponent({ routes, activeRoute }) {
             {end && (
               <CircleMarker
                 center={end}
-                pathOptions={{ color: route.color,fillColor: "white", fillOpacity: 1 }}
+                pathOptions={{ color: route.color, fillColor:"white", fillOpacity: 1 }}
               >
                 <Popup>{route.name} End</Popup>
               </CircleMarker>
