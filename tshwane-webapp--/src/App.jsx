@@ -13,10 +13,12 @@ function App() {
 
   //Data we can update later on
   const routes = Map_Data.features.map((f) => ({
-    id: f.properties.id,
-    name: f.properties.name,
+    id: f.id,
+    name: f.id.replace("_", " ").toUpperCase(),
     color: f.properties.color,
-    coordinates: f.geometry.coordinates.map(([lng, lat]) => [lat, lng]), //swaps them around
+    coordinates: f.geometry.coordinates.map(line =>
+  line.map(([lng, lat]) => [lat, lng])
+),
   }));
   return (
     <SearchContext.Provider value={{ searchTerm, setSearchTerm }}>
