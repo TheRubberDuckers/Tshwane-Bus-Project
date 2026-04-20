@@ -40,7 +40,7 @@ function MapComponent({ routes, activeRoute }) {
             />
 
             {start && (
-              <CircleMarker center={start} pathOptions={{ color: route.color }}>
+              <CircleMarker center={start} pathOptions={{ color: route.color, fillColor: "white", fillOpacity: 1}}>
                 <Popup>{route.name} Start</Popup>
               </CircleMarker>
             )}
@@ -48,7 +48,7 @@ function MapComponent({ routes, activeRoute }) {
             {end && (
               <CircleMarker
                 center={end}
-                pathOptions={{ color: route.color }}
+                pathOptions={{ color: route.color,fillColor: "white", fillOpacity: 1 }}
               >
                 <Popup>{route.name} End</Popup>
               </CircleMarker>
