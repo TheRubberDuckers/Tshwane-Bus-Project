@@ -4093,7 +4093,7 @@
       "type": "Feature",
       "id": "colbyn_4",
       "properties": {
-        "color": "orange"
+        "color": "red"
       },
       "geometry": {
         "type": "MultiLineString",
@@ -4575,7 +4575,7 @@
       "type": "Feature",
       "id": "colbyn_6",
       "properties": {
-        "color": "orange"
+        "color": "green"
       },
       "geometry": {
         "type": "MultiLineString",
@@ -5491,7 +5491,7 @@
       "type": "Feature",
       "id": "Danville_2",
       "properties": {
-        "color": "red"
+        "color": "blue"
       },
       "geometry": {
         "type": "MultiLineString",
@@ -6159,7 +6159,7 @@
       "type": "Feature",
       "id": "Danville_3",
       "properties": {
-        "color": "red"
+        "color": "yellow"
       },
       "geometry": {
         "type": "MultiLineString",
@@ -6373,7 +6373,7 @@
       "type": "Feature",
       "id": "Danville_4",
       "properties": {
-        "color": "red"
+        "color": "purple"
       },
       "geometry": {
         "type": "MultiLineString",
@@ -6775,7 +6775,7 @@
       "type": "Feature",
       "id": "Danville_5",
       "properties": {
-        "color": "red"
+        "color": "black"
       },
       "geometry": {
         "type": "MultiLineString",
@@ -7795,7 +7795,7 @@
       "type": "Feature",
       "id": "Doonport_1",
       "properties": {
-        "color": "lime"
+        "color": "green"
       },
       "geometry": {
         "type": "MultiLineString",
