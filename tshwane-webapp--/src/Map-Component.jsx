@@ -8,6 +8,7 @@ import {
 } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import React from "react";
+import "leaflet-polylineoffset";
 
 function MapComponent({ routes, activeRoute }) {
   return (
@@ -24,8 +25,8 @@ function MapComponent({ routes, activeRoute }) {
 
       <ZoomControl position="bottomright" />
 
-      {routes.map((route) => {
-        if (!activeRoute.includes(route.id)) return null;
+      {routes.map((route,index) => {
+        
 
         const flatCoords = route.coordinates?.flat();
 
@@ -37,6 +38,7 @@ function MapComponent({ routes, activeRoute }) {
             <Polyline
               positions={route.coordinates}
               pathOptions={{ color: route.color }}
+              offset={index * 1.5}
             />
 
             {start && (
