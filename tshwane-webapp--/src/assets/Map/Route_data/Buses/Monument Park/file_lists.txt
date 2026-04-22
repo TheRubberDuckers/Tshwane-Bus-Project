@@ -1,0 +1,2 @@
+id=monumentpark_1,color=pink,thabo_0.json,thabo_-1.json,jeff_0.json,nelson_0.json,makou_0.json,albertina_0.json,elephant_0.json,end
+id=monumentpark_2,color=yellow,thabo_0.json,thabo_-1.json,jeff_0.json,nelson_0.json,albertina_0.json,tiger_0.json,solomon_0.json,alandale_0.json,end
