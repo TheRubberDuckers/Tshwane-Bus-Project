@@ -1,0 +1,2 @@
+id=Moregloed_1,color=blue,bosman_0.json,madiba_-2.json,madiba_-1.json,madiba_0.json,madiba_1.json,madiba_2.json,steve_0.json,steve_1.json,steve_2.json,benswart_0.json,benswart_1.json,end
+id=Moregloed_2,color=pink,bosman_0.json,madiba_-2.json,madiba_-1.json,madiba_0.json,madiba_1.json,madiba_2.json,steve_0.json,steve_1.json,steve_2.json,benswart_0.json,benswart_1.json,benswart_2.json,lynette_0.json,lynette_1.json,end
