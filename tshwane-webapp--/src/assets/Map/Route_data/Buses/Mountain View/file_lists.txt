@@ -1,0 +1,3 @@
+id=mountain view_1,color=red,pretorius_0.json,pretorius_1.json,pretorius_3.json,church_0.json,eskia_1.json,eskia_2.json,eskia_3.json,eskia_4.json,moot_0.json,redeling_0.json,end
+id=mountain view_2,color=blue,bosman_0.json,bosman_1.json,paul_0.json,paul_1.json,paul_2.json,frenzina_0.json,end
+id=mountain view_4,color=blue,bosman_0.json,bosman_1.json,paul_0.json,paul_1.json,paul_2.json,frenzina_0.json,lambert_0.json,end

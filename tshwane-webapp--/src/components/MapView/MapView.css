@@ -1,0 +1,2 @@
+.map-view { flex: 1; min-width: 0; height: 100%; }
+.map-view__map { height: 100%; width: 100%; z-index: 0; }

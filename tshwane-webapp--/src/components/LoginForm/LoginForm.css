@@ -1,0 +1,4 @@
+.login-form { width: 100%; max-width: 380px; padding: 28px; background: #fff; border: 1px solid var(--line); border-radius: 12px; }
+.login-form h1 { font-size: 1.4rem; margin-bottom: 4px; }
+.login-form__hint { color: var(--muted); font-size: .9rem; margin-bottom: 20px; }
+.login-form__submit { width: 100%; margin-top: 12px; }

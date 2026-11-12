@@ -1,0 +1,3 @@
+.draw-map { height: 360px; border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
+.draw-map__map { height: 100%; width: 100%; cursor: crosshair; }
+@media (max-width: 800px) { .draw-map { height: 300px; } }

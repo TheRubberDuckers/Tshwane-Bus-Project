@@ -1,68 +1,50 @@
+/* Global tokens + shared button/form styles. Everything else lives beside its component. */
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  --forest: #1f3d33;
+  --header: #4a7060;
+  --accent: #2d6a4f;
+  --mint: #d8f3dc;
+  --bg: #f7fdf9;
+  --ink: #14261f;
+  --muted: #5b7267;
+  --line: #d8e6dd;
+  --danger: #b42318;
+  --radius: 8px;
+  --header-h: 64px;
+  --sidebar-w: 320px;
 }
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html, body, #root { height: 100%; }
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  font-family: "Atkinson Hyperlegible", system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  line-height: 1.45;
 }
+button, input, select, textarea { font: inherit; color: inherit; }
+button { cursor: pointer; }
+:focus-visible { outline: 3px solid #95d5b2; outline-offset: 2px; }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 6px;
+  padding: 8px 16px; border-radius: var(--radius);
+  border: 1px solid var(--accent); background: #fff; color: var(--accent); font-weight: 700;
 }
+.btn:hover { background: var(--mint); }
+.btn:disabled { opacity: .55; cursor: not-allowed; }
+.btn--primary { background: var(--accent); color: #fff; }
+.btn--primary:hover { background: var(--forest); }
+.btn--danger { border-color: var(--danger); color: var(--danger); }
+.btn--danger:hover { background: #fee4e2; }
+.btn--small { padding: 4px 10px; font-size: .85rem; }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
+.field { display: flex; flex-direction: column; gap: 4px; margin-bottom: 14px; }
+.field label { font-weight: 700; font-size: .9rem; }
+.field input[type="text"], .field input[type="password"], .field textarea {
+  padding: 9px 12px; border: 1px solid var(--line); border-radius: var(--radius); background: #fff;
 }
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
+.field input[type="color"] { width: 56px; height: 38px; padding: 2px; border: 1px solid var(--line); border-radius: var(--radius); background: #fff; }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
 }

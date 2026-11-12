@@ -1,0 +1,12 @@
+.route-form { background: #fff; border: 1px solid var(--line); border-radius: 12px; padding: 20px; display: flex; flex-direction: column; gap: 12px; }
+.route-form h2 { font-size: 1.15rem; }
+.route-form__row { display: flex; gap: 16px; align-items: flex-end; }
+.route-form__row .field { margin-bottom: 0; }
+.route-form__name { flex: 1; }
+.route-form__tools { display: flex; flex-wrap: wrap; gap: 8px; }
+.route-form__modes { display: flex; gap: 4px; margin-right: 8px; }
+.route-form__hint { color: var(--muted); font-size: .88rem; }
+.route-form__stops { list-style: none; display: grid; gap: 6px; }
+.route-form__stops li { display: flex; gap: 8px; }
+.route-form__stops input { flex: 1; min-width: 0; padding: 6px 10px; border: 1px solid var(--line); border-radius: var(--radius); }
+.route-form__actions { display: flex; gap: 8px; flex-wrap: wrap; }

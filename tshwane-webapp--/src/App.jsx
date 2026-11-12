@@ -1,44 +1,26 @@
-import "./App.css";
-import { useState } from "react";
-import Sidebar from "./Components/Sidebar";
-import Map_Data from "./assets/Map/MapData.json";
-import "leaflet/dist/leaflet.css";
-import Header from "./Components/Header";
-import MapComponent from "./Map-Component";
-import { SearchContext } from "./Components/Context";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { AuthProvider } from "./context/AuthContext";
+import { SearchProvider } from "./context/SearchContext";
+import Layout from "./components/Layout/Layout";
+import ProtectedRoute from "./components/ProtectedRoute/ProtectedRoute";
+import HomePage from "./pages/HomePage/HomePage";
+import LoginPage from "./pages/LoginPage/LoginPage";
+import HelperPage from "./pages/HelperPage/HelperPage";
 
-function App() {
-  const [activeRoute, setActiveRoute] = useState(null);
-  const [searchTerm, setSearchTerm] = useState("");
-
-  //Data we can update later on
-  const routes = Map_Data.features.map((f) => ({
-    id: f.properties.id,
-    name: f.properties.name,
-    color: f.properties.color,
-    coordinates: f.geometry.coordinates.map(([lng, lat]) => [lat, lng]), //swaps them around
-  }));
+export default function App() {
   return (
-    <SearchContext.Provider value={{ searchTerm, setSearchTerm }}>
-      <div className="grid grid-col-3 gap-2 bg-[#f7fdf9] fixed top-0 left-0 right-0 w-100vw h-300">
-        <div className="col-span-3 -mt-14">
-          <Header />
-        </div>
-
-        <div className="col-span-3 flex flex-row -mt-125">
-          <Sidebar
-            routes={routes}
-            activeRoute={activeRoute}
-            onSelect={setActiveRoute}
-          />
-
-          <div className="">
-            <MapComponent routes={routes} activeRoute={activeRoute} />
-          </div>
-        </div>
-      </div>
-    </SearchContext.Provider>
+    <BrowserRouter>
+      <AuthProvider>
+        <SearchProvider>
+          <Routes>
+            <Route element={<Layout />}>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/login" element={<LoginPage />} />
+              <Route path="/helper" element={<ProtectedRoute><HelperPage /></ProtectedRoute>} />
+            </Route>
+          </Routes>
+        </SearchProvider>
+      </AuthProvider>
+    </BrowserRouter>
   );
 }
-
-export default App;

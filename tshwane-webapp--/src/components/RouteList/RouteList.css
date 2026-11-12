@@ -1,0 +1,8 @@
+.route-list { background: #fff; border: 1px solid var(--line); border-radius: 12px; padding: 20px; }
+.route-list h2 { font-size: 1.15rem; margin-bottom: 12px; }
+.route-list ul { list-style: none; }
+.route-list__item { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 10px 0 10px 12px; border-bottom: 1px solid var(--line); border-left: 6px solid var(--route-color); }
+.route-list__item--editing { background: var(--mint); }
+.route-list__meta { display: block; font-size: .8rem; color: var(--muted); }
+.route-list__actions { display: flex; gap: 6px; flex: none; }
+.route-list__empty { color: var(--muted); }

@@ -1,0 +1,2 @@
+.layout { display: flex; flex-direction: column; height: 100dvh; }
+.layout__main { flex: 1; min-height: 0; overflow: auto; position: relative; }

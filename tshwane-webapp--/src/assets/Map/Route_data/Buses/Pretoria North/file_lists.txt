@@ -1,0 +1,4 @@
+id=pretoria north_1,color=blue,bosman_0.json,bosman_1.json,paul_0.json,paul_1.json,paul_2.json,paul_3.json,paul_4.json,paul_5.json,rachel_0.json,rachel_1.json,rachel_2.json,end
+id=pretoria north_2,color=blue,bosman_0.json,bosman_1.json,paul_0.json,paul_1.json,paul_2.json,paul_3.json,paul_4.json,paul_5.json,janvan_0.json,end
+id=pretoria north_3,color=blue,bosman_0.json,bosman_1.json,paul_0.json,paul_1.json,paul_2.json,paul_3.json,paul_4.json,paul_5.json,rachel_0.json,rachel_1.json,eeufees_0.json,end
+id=pretoria north_4,color=blue,bosman_0.json,bosman_1.json,paul_0.json,paul_1.json,paul_2.json,paul_3.json,paul_4.json,paul_5.json,rachel_0.json,danie_0.json,end

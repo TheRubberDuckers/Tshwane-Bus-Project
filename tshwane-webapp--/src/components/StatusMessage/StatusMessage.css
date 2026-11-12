@@ -1,0 +1,4 @@
+.status { padding: 10px 14px; border-radius: var(--radius); font-size: .92rem; white-space: pre-line; }
+.status--info { background: var(--mint); color: var(--forest); }
+.status--error { background: #fee4e2; color: var(--danger); }
+.status--success { background: #d1fadf; color: #05603a; }
