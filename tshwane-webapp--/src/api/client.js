@@ -1,4 +1,4 @@
-const BASE = import.meta.env.VITE_API_URL ?? "http://localhost:8000/api";
+const BASE = "http://13.246.131.118/api";
 const KEY = "tshwane_token";
 
 export const tokenStore = {
